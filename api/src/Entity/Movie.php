@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ApiResource
  * @ORM\Entity
  */
-class Greeting
+class Movie
 {
     /**
      * @var int The entity Id
@@ -24,12 +24,20 @@ class Greeting
     private $id;
 
     /**
-     * @var string A nice person
+     * @var string Title
      *
      * @ORM\Column
      * @Assert\NotBlank
      */
-    public $name = '';
+    public $title;
+
+    /**
+     * @var string The description of this movie.
+     *
+     * @ORM\Column(nullable=true)
+     *
+     */
+    public $category;
 
     public function getId(): int
     {
