@@ -37,9 +37,11 @@ class List extends Component {
 
   render() {
     return (
-      <div>
-       <center><h1>Movie List</h1></center>
 
+      <div>
+
+     <center><h1>Movie List</h1></center>
+  
         {this.props.loading && (
           <div className="alert alert-info">Loading...</div>
         )}
@@ -54,7 +56,7 @@ class List extends Component {
 
         <center>
           <Link to="create" className="btn btn-dark btn-lg btn-block">
-            Add
+            Add New
           </Link>
         </center>
           
@@ -64,6 +66,7 @@ class List extends Component {
               <th>Title</th>
               <th>Category</th>
               <th>Description</th>
+              <th>Already seen?</th>
               <th colSpan={2} />
             </tr>
           </thead>
@@ -74,9 +77,10 @@ class List extends Component {
                   <td>{item['title']}</td>
                   <td>{item['category']}</td>
                   <td>{item['description']}</td>
+                  <td>{item['is_watch']}</td>
                   <td>
                     <Link to={`show/${encodeURIComponent(item['@id'])}`}>
-                      <span className="fa fa-search" aria-hidden="true" />
+                      <span className="fa fa-search" color="black" aria-hidden="true" />
                       <span className="sr-only">Show</span>
                     </Link>
                   </td>

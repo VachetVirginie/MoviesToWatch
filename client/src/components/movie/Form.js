@@ -66,6 +66,13 @@ class Form extends Component {
           placeholder="Description"
           required={false}
         />
+                <Field
+          component={this.renderField}
+          name="is_watch"
+          type="text"
+          placeholder="Already Watch?"
+          required={false}
+        />
 
         <button  type="submit" className="btn btn-dark">
           Submit

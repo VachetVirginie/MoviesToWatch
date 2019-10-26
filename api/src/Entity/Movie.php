@@ -47,6 +47,14 @@ class Movie
      */
     public $description;
 
+    /**
+     * @var boolean is watch?
+     *
+     * @ORM\Column(nullable=true)
+     *
+     */
+    public $is_watch;
+
     public function getId(): int
     {
         return $this->id;
