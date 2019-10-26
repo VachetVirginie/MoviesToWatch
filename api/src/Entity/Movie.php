@@ -32,12 +32,20 @@ class Movie
     public $title;
 
     /**
-     * @var string The description of this movie.
+     * @var string The style of this movie.
      *
      * @ORM\Column(nullable=true)
      *
      */
     public $category;
+
+    /**
+     * @var string The description of this movie.
+     *
+     * @ORM\Column(nullable=true)
+     *
+     */
+    public $description;
 
     public function getId(): int
     {

@@ -57,12 +57,13 @@ class List extends Component {
             Add
           </Link>
         </center>
-
+          
         <table className="table table-striped table-hover">
           <thead>
             <tr>
               <th>Title</th>
               <th>Category</th>
+              <th>Description</th>
               <th colSpan={2} />
             </tr>
           </thead>
@@ -72,6 +73,7 @@ class List extends Component {
                 <tr key={item['@id']}>
                   <td>{item['title']}</td>
                   <td>{item['category']}</td>
+                  <td>{item['description']}</td>
                   <td>
                     <Link to={`show/${encodeURIComponent(item['@id'])}`}>
                       <span className="fa fa-search" aria-hidden="true" />

@@ -59,6 +59,13 @@ class Form extends Component {
           placeholder="Category"
           required={true}
         />
+        <Field
+          component={this.renderField}
+          name="description"
+          type="text"
+          placeholder="Description"
+          required={false}
+        />
 
         <button  type="submit" className="btn btn-dark">
           Submit
